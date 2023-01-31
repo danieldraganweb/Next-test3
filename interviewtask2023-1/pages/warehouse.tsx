@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/Warehouse.module.css";
+import styles from "../styles/Home.module.css";
 
 const Warehouse = () => {
   const [inventory] = useState([
@@ -65,7 +65,7 @@ const Warehouse = () => {
   return (
     <div>
       <h1 className={styles.inventory}>Inventory</h1>
-      <h1>Available Products</h1>
+      <h1 className={styles.available}>Available Products</h1>
 
       <ul>
         {inventory.map((item) => (
