@@ -14,4 +14,11 @@
   flex-direction: row;
   justify-content: space-around;
   color: cyan;
+  height: 80px;
+}
+.productslist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
 }

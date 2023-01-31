@@ -11,8 +11,27 @@ body {
   font-size: 1rem;
 }
 .available {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: cyan;
+  font-size: xx-large;
+  width: 10rem;
+}
+ul {
+  list-style-type: none;
+  font-size: xx-large;
+}
+li {
+  margin: 1rem;
+  list-style-type: none;
+  font-size: xx-large;
+}
+button {
+  font-size: xx-large;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 16, 16);
+}
+button:hover {
+  background-color: rgb(17, 16, 16);
+  color: rgb(255, 255, 255);
 }
