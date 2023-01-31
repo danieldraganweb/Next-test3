@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import styles from "../styles/Warehouse.module.css";
 
 const Warehouse = () => {
-  const [inventory, setInventory] = useState([
+  const [inventory] = useState([
     {
       art_id: "1",
       name: "leg",
@@ -24,7 +25,7 @@ const Warehouse = () => {
     },
   ]);
 
-  const [products, setProducts] = useState([
+  const [products] = useState([
     {
       name: "Dining Chair",
       contain_articles: [
@@ -63,8 +64,9 @@ const Warehouse = () => {
 
   return (
     <div>
+      <h1 className={styles.inventory}>Inventory</h1>
       <h1>Available Products</h1>
-      <h1>Inventory</h1>
+
       <ul>
         {inventory.map((item) => (
           <li key={item.art_id}>
