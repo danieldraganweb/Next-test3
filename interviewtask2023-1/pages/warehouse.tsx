@@ -64,7 +64,6 @@ const Warehouse = () => {
   return (
     <div>
       <h1>Available Products</h1>
-
       <h1>Inventory</h1>
       <ul>
         {inventory.map((item) => (
