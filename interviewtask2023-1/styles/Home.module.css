@@ -9,7 +9,7 @@
   color: cyan;
 }
 .inventory {
-  border: 1px solid;
+  border: 1px solid cyan;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -21,4 +21,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
+}
+.cardContentRight {
+  color: black;
+  border: 1px solid cyan;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
 }
