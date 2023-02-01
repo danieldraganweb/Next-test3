@@ -88,10 +88,10 @@ const Warehouse = () => {
             <h3>
               {product.name}{" "}
               {product.name === "Dining Chair"
-                ? Math.floor(currentNumberOfScrews / 8)
+                ? currentNumberOfScrews && Math.floor(currentNumberOfScrews / 8)
                 : null}
               {product.name === "Dining Table"
-                ? Math.floor(currentNumberOfScrews / 8)
+                ? currentNumberOfScrews && Math.floor(currentNumberOfScrews / 8)
                 : null}
             </h3>
             <p>Price: {product.price}</p>
