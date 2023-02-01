@@ -78,7 +78,7 @@ const Warehouse = () => {
         <ul>
           {inventory.map((article) => (
             <li key={article.art_id}>
-              {article.art_id} - Name: {article.name} - Available stock{" "}
+              art. id {article.art_id} - {article.name} - Available stock:{" "}
               {article.stock}
             </li>
           ))}
@@ -99,7 +99,7 @@ const Warehouse = () => {
               {product.contain_articles.map((article) => (
                 <div key={article.art_id}>
                   <p>
-                    art id:{article.art_id} - {article.amount_of}
+                    art id: {article.art_id} - amount: {article.amount_of}
                   </p>
                 </div>
               ))}
