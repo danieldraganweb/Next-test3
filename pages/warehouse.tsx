@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 
 const Warehouse = () => {
-  // State to keep track of the inventory
   const [inventory, setInventory] = useState([
     {
       art_id: "1",
@@ -26,7 +25,6 @@ const Warehouse = () => {
     },
   ]);
 
-  // State to keep track of the products
   const [products, setProducts] = useState([
     {
       name: "Dining Chair",
@@ -66,7 +64,6 @@ const Warehouse = () => {
     },
   ]);
 
-  // Function to calculate the availability of a product based on the inventory
   const checkProductAvailability = (product: { contain_articles: any }) => {
     for (const article of product.contain_articles) {
       const foundArticle = inventory.find(
@@ -79,10 +76,12 @@ const Warehouse = () => {
     return true;
   };
 
-  // Function to handle the add to cart button click
-  const onAddToCartClick = (product: { contain_articles: any }) => {
+  const onAddToCartClick = (product: {
+    name?: string;
+    price?: number;
+    contain_articles: any;
+  }) => {
     if (checkProductAvailability(product)) {
-      // Remove the articles from the inventory
       const updatedInventory = inventory.map((inventoryArticle) => {
         for (const article of product.contain_articles) {
           if (inventoryArticle.art_id === article.art_id) {
@@ -96,14 +95,15 @@ const Warehouse = () => {
       });
       setInventory(updatedInventory);
     } else {
-      // Show an error message
-      alert("Product is not available");
+      alert("Product is out of stock");
     }
   };
 
-  // Function to handle the remove from cart button click
-  const onRemoveFromCartClick = (product: { contain_articles: any }) => {
-    // Add the articles back to the inventory
+  const onRemoveFromCartClick = (product: {
+    name?: string;
+    price?: number;
+    contain_articles: any;
+  }) => {
     const updatedInventory = inventory.map((inventoryArticle) => {
       for (const article of product.contain_articles) {
         if (inventoryArticle.art_id === article.art_id) {
@@ -120,32 +120,34 @@ const Warehouse = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Warehouse</h1>
       <div className={styles.grid}>
         {products.map((product) => (
           <div key={product.name} className={styles.card}>
+            <h2>Inventory</h2>
+            <ul>
+              {inventory.map((article) => (
+                <li key={article.art_id}>
+                  {article.art_id} - {article.name} - {article.stock}
+                </li>
+              ))}
+            </ul>
             <h3>{product.name}</h3>
-
-            <div className={styles.cardContent}>
-              <div className={styles.cardContentLeft}>
-                <p>Price: {product.price}</p>
-                <p>
-                  Availability:{" "}
-                  {checkProductAvailability(product)
-                    ? "Available"
-                    : "Not Available"}
-                </p>
-              </div>
-
-              <div className={styles.cardContentRight}>
-                <button onClick={() => onAddToCartClick(product)}>
-                  Add to cart
-                </button>
-                <button onClick={() => onRemoveFromCartClick(product)}>
-                  Remove from cart
-                </button>
-              </div>
-            </div>
+            <p>Price: {product.price}</p>
+            <p>
+              {product.contain_articles.map((article) => (
+                <div key={article.art_id}>
+                  <p>
+                    {article.art_id} - {article.amount_of}
+                  </p>
+                </div>
+              ))}
+            </p>
+            <button onClick={() => onAddToCartClick(product)}>
+              Add to cart
+            </button>
+            <button onClick={() => onRemoveFromCartClick(product)}>
+              Remove from cart
+            </button>
           </div>
         ))}
       </div>
