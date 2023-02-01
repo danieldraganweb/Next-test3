@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 
 const Warehouse = () => {
-  const [inventory] = useState([
+  // State to keep track of the inventory
+  const [inventory, setInventory] = useState([
     {
       art_id: "1",
       name: "Leg",
@@ -25,9 +26,11 @@ const Warehouse = () => {
     },
   ]);
 
+  // State to keep track of the products
   const [products, setProducts] = useState([
     {
       name: "Dining Chair",
+      price: 150,
       contain_articles: [
         {
           art_id: "1",
@@ -44,7 +47,8 @@ const Warehouse = () => {
       ],
     },
     {
-      name: "Dinning Table",
+      name: "Dining Table",
+      price: 300,
       contain_articles: [
         {
           art_id: "1",
@@ -62,62 +66,88 @@ const Warehouse = () => {
     },
   ]);
 
-  const handleAddAmount = (
-    productIndex: number,
-    articleIndex: number,
-    amount: number
-  ) => {
-    const newProducts = [...products];
-    newProducts[productIndex].contain_articles[articleIndex].amount_of +=
-      amount;
-    setProducts(newProducts);
+  // Function to calculate the availability of a product based on the inventory
+  const checkProductAvailability = (product: { contain_articles: any }) => {
+    for (const article of product.contain_articles) {
+      const foundArticle = inventory.find(
+        (inventoryArticle) => inventoryArticle.art_id === article.art_id
+      );
+      if (!foundArticle || foundArticle.stock < article.amount_of) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  // Function to handle the add to cart button click
+  const onAddToCartClick = (product: { contain_articles: any }) => {
+    if (checkProductAvailability(product)) {
+      // Remove the articles from the inventory
+      const updatedInventory = inventory.map((inventoryArticle) => {
+        for (const article of product.contain_articles) {
+          if (inventoryArticle.art_id === article.art_id) {
+            return {
+              ...inventoryArticle,
+              stock: inventoryArticle.stock - article.amount_of,
+            };
+          }
+        }
+        return inventoryArticle;
+      });
+      setInventory(updatedInventory);
+    } else {
+      // Show an error message
+      alert("Product is not available");
+    }
+  };
+
+  // Function to handle the remove from cart button click
+  const onRemoveFromCartClick = (product: { contain_articles: any }) => {
+    // Add the articles back to the inventory
+    const updatedInventory = inventory.map((inventoryArticle) => {
+      for (const article of product.contain_articles) {
+        if (inventoryArticle.art_id === article.art_id) {
+          return {
+            ...inventoryArticle,
+            stock: inventoryArticle.stock + article.amount_of,
+          };
+        }
+      }
+      return inventoryArticle;
+    });
+    setInventory(updatedInventory);
   };
 
   return (
-    <div>
-      <div className={styles.inventory}>
-        <h1>Inventory</h1>
-      </div>
-      <div className={styles.productlist}>
-        <h1 className={styles.available}>Available Products</h1>
+    <div className={styles.container}>
+      <h1>Warehouse</h1>
+      <div className={styles.grid}>
+        {products.map((product) => (
+          <div key={product.name} className={styles.card}>
+            <h3>{product.name}</h3>
 
-        <ul>
-          {inventory.map((item) => (
-            <li key={item.art_id}>
-              {item.name} - {item.stock}
-            </li>
-          ))}
-        </ul>
+            <div className={styles.cardContent}>
+              <div className={styles.cardContentLeft}>
+                <p>Price: {product.price}</p>
+                <p>
+                  Availability:{" "}
+                  {checkProductAvailability(product)
+                    ? "Available"
+                    : "Not Available"}
+                </p>
+              </div>
 
-        <h1>Products</h1>
-        <ul>
-          {products.map((product, productIndex) => (
-            <li key={product.name}>
-              {product.name}
-              <ul>
-                {product.contain_articles.map((article, articleIndex) => (
-                  <li key={article.art_id}>
-                    {article.art_id} - {article.amount_of}
-                    <button
-                      onClick={() =>
-                        handleAddAmount(productIndex, articleIndex, -1)
-                      }
-                    >
-                      -
-                    </button>
-                    <button
-                      onClick={() =>
-                        handleAddAmount(productIndex, articleIndex, 1)
-                      }
-                    >
-                      +
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+              <div className={styles.cardContentRight}>
+                <button onClick={() => onAddToCartClick(product)}>
+                  Add to cart
+                </button>
+                <button onClick={() => onRemoveFromCartClick(product)}>
+                  Remove from cart
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
