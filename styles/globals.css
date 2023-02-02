@@ -17,23 +17,3 @@ h1 {
   font-weight: 700;
   margin: 1rem;
 }
-ul {
-  list-style-type: none;
-  font-size: large;
-}
-li {
-  list-style-type: none;
-  font-size: large;
-}
-button {
-  font-size: large;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: rgb(255, 255, 255);
-  color: rgb(17, 16, 16);
-}
-button:hover {
-  background-color: rgb(17, 16, 16);
-  color: rgb(255, 255, 255);
-}

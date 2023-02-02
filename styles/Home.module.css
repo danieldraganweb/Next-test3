@@ -16,16 +16,23 @@
   color: cyan;
   height: 80px;
 }
-.productslist {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+ul {
+  list-style-type: none;
+  font-size: large;
 }
-.cardContentRight {
-  color: black;
-  border: 1px solid cyan;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
+li {
+  list-style-type: none;
+  font-size: large;
+}
+button {
+  font-size: large;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 16, 16);
+}
+button:hover {
+  background-color: rgb(17, 16, 16);
+  color: rgb(255, 255, 255);
 }
