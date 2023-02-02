@@ -91,7 +91,7 @@ const Warehouse = () => {
                   : null}
               </h3>
               <p>Price: {product.price}</p>
-              <p>
+              <div>
                 {product.contain_articles.map((article) => (
                   <div key={article.art_id}>
                     <p>
@@ -99,7 +99,7 @@ const Warehouse = () => {
                     </p>
                   </div>
                 ))}
-              </p>
+              </div>
 
               <button
                 className={styles.addbutton}
