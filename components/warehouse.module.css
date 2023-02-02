@@ -20,16 +20,17 @@
   height: 100vh;
   z-index: -1;
   overflow: hidden;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
-  overflow: hidden;
   margin-bottom: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .title {
   font-size: 90px;
   font-weight: 600;
   position: relative;
-  background: -webkit-linear-gradient(#3c6255, #227c70);
+  background: -webkit-linear-gradient(#e2e3e3, #227c70);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
@@ -88,7 +89,7 @@
 }
 
 .card {
-  height: 50%;
+  height: 30%;
   font-size: 10px;
   display: flex;
   flex-direction: column;
@@ -114,6 +115,7 @@
   line-height: 10px;
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
+  padding-bottom: 0px;
 }
 .grid > div:nth-child(1) {
   background: transparent;

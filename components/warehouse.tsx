@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-//import background from "../public/IMG/background.jpg";
 
 import styles from "./warehouse.module.css";
 
