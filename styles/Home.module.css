@@ -16,15 +16,15 @@
   color: cyan;
   height: 80px;
 }
-ul {
+.ul {
   list-style-type: none;
   font-size: large;
 }
-li {
+.li {
   list-style-type: none;
   font-size: large;
 }
-button {
+.button {
   font-size: large;
   margin: 1rem;
   padding: 1rem;
@@ -32,7 +32,7 @@ button {
   background-color: rgb(255, 255, 255);
   color: rgb(17, 16, 16);
 }
-button:hover {
+.button:hover {
   background-color: rgb(17, 16, 16);
   color: rgb(255, 255, 255);
 }
