@@ -49,11 +49,12 @@
   align-items: center;
   position: relative;
   width: 30%;
-  margin-top: -50px;
-  font-size: 1rem;
+  height: 30%;
+  font-size: 1.4rem;
+  margin-bottom: none;
 }
 .removebutton {
-  background-color: rgb(210, 27, 27);
+  background-color: rgb(129, 9, 9);
   color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
@@ -66,10 +67,7 @@
   background-color: rgb(93, 6, 6);
   color: rgb(245, 233, 233);
 }
-.removebutton:active {
-  background-color: rgb(17, 16, 16);
-  color: rgb(255, 255, 255);
-}
+
 .addbutton {
   background-color: rgb(28, 139, 24);
   color: rgb(255, 255, 255);

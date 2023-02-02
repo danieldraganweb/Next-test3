@@ -106,7 +106,7 @@ const Warehouse = () => {
                 {product.contain_articles.map((article) => (
                   <div key={article.art_id}>
                     <p>
-                      art id: {article.art_id} - amount: {article.amount_of}
+                      Art. ID: {article.art_id} - Amount: {article.amount_of}
                     </p>
                   </div>
                 ))}
