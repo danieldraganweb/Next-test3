@@ -74,7 +74,7 @@ const Warehouse = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <>
       <div className={styles.inventory}>
         <h2>Inventory</h2>
         <ul>
@@ -86,44 +86,53 @@ const Warehouse = () => {
           ))}
         </ul>
       </div>
-      <div className={styles.grid}>
-        {products.map((product) => (
-          <div key={product.name} className={styles.card}>
-            <h3>
-              {product.name}{" "}
-              <div className={styles.diningchair}>
-                {product.name === "Dining Chair"
-                  ? currentNumberOfScrews &&
-                    Math.floor(currentNumberOfScrews / 8)
-                  : null}
-              </div>
-              <div className={styles.diningtable}>
-                {product.name === "Dining Table"
-                  ? currentNumberOfScrews &&
-                    Math.floor(currentNumberOfScrews / 8)
-                  : null}
-              </div>
-            </h3>
-            <p>Price: {product.price}</p>
-            <p>
-              {product.contain_articles.map((article) => (
-                <div key={article.art_id}>
-                  <p>
-                    art id: {article.art_id} - amount: {article.amount_of}
-                  </p>
+      <div className={styles.container}>
+        <div className={styles.grid}>
+          {products.map((product) => (
+            <div key={product.name} className={styles.card}>
+              <h3>
+                {product.name}{" "}
+                <div className={styles.diningchair}>
+                  {product.name === "Dining Chair"
+                    ? currentNumberOfScrews &&
+                      Math.floor(currentNumberOfScrews / 8)
+                    : null}
                 </div>
-              ))}
-            </p>
-            <button onClick={() => onAddToCartClick(product)}>
-              Add to cart
-            </button>
-            <button onClick={() => onRemoveFromCartClick(product)}>
-              Remove from cart
-            </button>
-          </div>
-        ))}
+                <div className={styles.diningtable}>
+                  {product.name === "Dining Table"
+                    ? currentNumberOfScrews &&
+                      Math.floor(currentNumberOfScrews / 8)
+                    : null}
+                </div>
+              </h3>
+              <p>Price: {product.price}</p>
+              <p>
+                {product.contain_articles.map((article) => (
+                  <div key={article.art_id}>
+                    <p>
+                      art id: {article.art_id} - amount: {article.amount_of}
+                    </p>
+                  </div>
+                ))}
+              </p>
+
+              <button
+                className={styles.addbutton}
+                onClick={() => onAddToCartClick(product)}
+              >
+                Add to cart
+              </button>
+              <button
+                className={styles.removebutton}
+                onClick={() => onRemoveFromCartClick(product)}
+              >
+                Remove from cart
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
