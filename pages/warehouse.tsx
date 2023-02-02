@@ -91,19 +91,15 @@ const Warehouse = () => {
           {products.map((product) => (
             <div key={product.name} className={styles.card}>
               <h3>
-                {product.name}{" "}
-                <div className={styles.diningchair}>
-                  {product.name === "Dining Chair"
-                    ? currentNumberOfScrews &&
-                      Math.floor(currentNumberOfScrews / 8)
-                    : null}
-                </div>
-                <div className={styles.diningtable}>
-                  {product.name === "Dining Table"
-                    ? currentNumberOfScrews &&
-                      Math.floor(currentNumberOfScrews / 8)
-                    : null}
-                </div>
+                {product.name} {"- Available:"}{" "}
+                {product.name === "Dining Chair"
+                  ? currentNumberOfScrews &&
+                    Math.floor(currentNumberOfScrews / 8)
+                  : null}
+                {product.name === "Dining Table"
+                  ? currentNumberOfScrews &&
+                    Math.floor(currentNumberOfScrews / 8)
+                  : null}
               </h3>
               <p>Price: {product.price}</p>
               <p>

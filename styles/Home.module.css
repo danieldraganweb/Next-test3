@@ -71,11 +71,11 @@
   margin: 10px;
   cursor: pointer;
 }
-.button:hover {
+.addbutton:hover {
   background-color: rgb(17, 16, 16);
   color: rgb(245, 233, 233);
 }
-.button:active {
+.removebutton:active {
   background-color: rgb(17, 16, 16);
   color: rgb(255, 255, 255);
 }
@@ -103,4 +103,11 @@
   text-align: center;
   height: 420px;
   line-height: 10px;
+}
+.diningchair {
+  border: 1px solid #ccc;
+}
+.diningtable {
+  border: 1px solid #ccc;
+  height: 20px;
 }
