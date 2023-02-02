@@ -75,17 +75,6 @@ const Warehouse = () => {
 
   return (
     <>
-      <div className={styles.inventory}>
-        <h2>Inventory</h2>
-        <ul>
-          {inventory.map((article) => (
-            <li key={article.art_id}>
-              art. id {article.art_id} - {article.name} - Available stock:{" "}
-              {article.stock}
-            </li>
-          ))}
-        </ul>
-      </div>
       <div className={styles.container}>
         <div className={styles.grid}>
           {products.map((product) => (
@@ -127,6 +116,17 @@ const Warehouse = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className={styles.inventory}>
+        <h2>Inventory</h2>
+        <ul>
+          {inventory.map((article) => (
+            <li key={article.art_id}>
+              Art. ID {article.art_id} - {article.name} - Available stock:{" "}
+              {article.stock}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

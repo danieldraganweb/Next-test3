@@ -23,14 +23,16 @@
   filter: blur(3px);
   -webkit-filter: blur(3px);
   overflow: hidden;
+  margin-bottom: none;
 }
 .title {
   font-size: 90px;
   font-weight: 600;
   position: relative;
-  background: -webkit-linear-gradient(#727272, #4e6c50);
+  background: -webkit-linear-gradient(#3c6255, #227c70);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
 .title::after {
   content: "";
@@ -39,7 +41,7 @@
   bottom: 0;
   width: 100%;
   height: 4px;
-  background-color: #4e6c50;
+  background-color: #227c70;
 }
 
 .inventory {
@@ -48,10 +50,24 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: 30%;
-  height: 30%;
+  width: 600px;
+  height: 200px;
   font-size: 1.4rem;
-  margin-bottom: none;
+}
+
+.addbutton {
+  background-color: #61876e;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
+}
+.addbutton:hover {
+  background-color: #3c6255;
+  color: rgb(245, 233, 233);
 }
 .removebutton {
   background-color: rgb(129, 9, 9);
@@ -68,25 +84,6 @@
   color: rgb(245, 233, 233);
 }
 
-.addbutton {
-  background-color: rgb(28, 139, 24);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 1rem;
-  margin: 10px;
-  cursor: pointer;
-}
-.addbutton:hover {
-  background-color: rgb(93, 6, 6);
-  color: rgb(245, 233, 233);
-}
-.addbutton:active {
-  background-color: rgb(17, 16, 16);
-  color: rgb(255, 255, 255);
-}
-
 .card {
   height: 50%;
   font-size: 10px;
@@ -95,6 +92,7 @@
   width: 500px;
   display: flex;
   flex-direction: column;
+  line-height: 3px;
 }
 
 .grid {
@@ -104,18 +102,18 @@
   grid-auto-rows: minmax(100px, auto);
 }
 .grid > div {
+  border: 1px solid white;
   border-radius: 5px;
   padding: 1rem;
   font-size: 1.2rem;
   text-align: center;
   height: 420px;
   line-height: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .grid > div:nth-child(1) {
   background: transparent;
   text-transform: 0.5;
-  opacity: 15px;
 }
 .grid > div:nth-child(2) {
   background: transparent;
