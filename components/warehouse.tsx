@@ -7,6 +7,14 @@ const Warehouse = () => {
 
   const [products] = useState(initialProducts);
 
+  // const currentNumberOfLeg = inventory.find(
+  //   (article) => article.art_id === "1"
+  // )?.stock;
+
+  // const initialNumberOfLeg = initialInventory.find(
+  //   (article) => article.art_id === "1"
+  // )?.stock;
+
   const currentNumberOfScrews = inventory.find(
     (article) => article.art_id === "2"
   )?.stock;
@@ -14,6 +22,22 @@ const Warehouse = () => {
   const initialNumberOfScrews = initialInventory.find(
     (article) => article.art_id === "2"
   )?.stock;
+
+  // const currentNumberOfSeat = inventory.find(
+  //   (article) => article.art_id === "3"
+  // )?.stock;
+
+  // const initialNumberOfSeat = initialInventory.find(
+  //   (article) => article.art_id === "3"
+  // )?.stock;
+
+  // const currentNumberOfTableTop = inventory.find(
+  //   (article) => article.art_id === "4"
+  // )?.stock;
+
+  // const initialNumberOfTableTop = initialInventory.find(
+  //   (article) => article.art_id === "4"
+  // )?.stock;
 
   const checkProductAvailability = (product: { contain_articles: any }) => {
     for (const article of product.contain_articles) {
@@ -68,6 +92,16 @@ const Warehouse = () => {
     if (initialNumberOfScrews === currentNumberOfScrews) {
       return;
     }
+    // if (initialNumberOfLeg === currentNumberOfLeg) {
+    //   return;
+    // }
+    // if (initialNumberOfSeat === currentNumberOfSeat) {
+    //   return;
+    // }
+    // if (initialNumberOfTableTop === currentNumberOfTableTop) {
+    //   return;
+    // }
+
     setInventory(updatedInventory);
   };
 
