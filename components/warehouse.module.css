@@ -126,7 +126,7 @@
   text-transform: 0.5;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 200px) {
   .body {
     display: flex;
     flex-direction: column;
