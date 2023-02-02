@@ -75,8 +75,8 @@ const Warehouse = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Inventory</h2>
-      <div className={styles.grid}>
+      <div className={styles.inventory}>
+        <h2>Inventory</h2>
         <ul>
           {inventory.map((article) => (
             <li key={article.art_id}>
@@ -85,16 +85,24 @@ const Warehouse = () => {
             </li>
           ))}
         </ul>
+      </div>
+      <div className={styles.grid}>
         {products.map((product) => (
           <div key={product.name} className={styles.card}>
             <h3>
               {product.name}{" "}
-              {product.name === "Dining Chair"
-                ? currentNumberOfScrews && Math.floor(currentNumberOfScrews / 8)
-                : null}
-              {product.name === "Dining Table"
-                ? currentNumberOfScrews && Math.floor(currentNumberOfScrews / 8)
-                : null}
+              <div className={styles.diningchair}>
+                {product.name === "Dining Chair"
+                  ? currentNumberOfScrews &&
+                    Math.floor(currentNumberOfScrews / 8)
+                  : null}
+              </div>
+              <div className={styles.diningtable}>
+                {product.name === "Dining Table"
+                  ? currentNumberOfScrews &&
+                    Math.floor(currentNumberOfScrews / 8)
+                  : null}
+              </div>
             </h3>
             <p>Price: {product.price}</p>
             <p>
