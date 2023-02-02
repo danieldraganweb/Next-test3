@@ -52,7 +52,7 @@
   position: relative;
   width: 600px;
   height: 200px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .addbutton {
@@ -118,4 +118,28 @@
 .grid > div:nth-child(2) {
   background: transparent;
   text-transform: 0.5;
+}
+
+@media screen and (min-width: 400px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
 }
