@@ -1,11 +1,11 @@
-"use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import styles from "../styles/Home.module.css";
 
 const Warehouse = () => {
   const [inventory, setInventory] = useState(initialInventory);
 
-  const [products, setProducts] = useState(initialProducts);
+  const [products] = useState(initialProducts);
 
   const currentNumberOfScrews = inventory.find(
     (article) => article.art_id === "2"
@@ -73,8 +73,8 @@ const Warehouse = () => {
 
   return (
     <div className={styles.container}>
+      <h2>Inventory</h2>
       <div className={styles.grid}>
-        <h2>Inventory</h2>
         <ul>
           {inventory.map((article) => (
             <li key={article.art_id}>
