@@ -17,7 +17,7 @@
 .background {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
   overflow: hidden;
   filter: blur(3px);
@@ -28,7 +28,7 @@
   font-size: 90px;
   font-weight: 600;
   position: relative;
-  background: -webkit-linear-gradient(#395144, #4e6c50);
+  background: -webkit-linear-gradient(#727272, #4e6c50);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -41,6 +41,7 @@
   height: 4px;
   background-color: #4e6c50;
 }
+
 .inventory {
   display: flex;
   flex-direction: column;
@@ -52,7 +53,7 @@
   font-size: 1rem;
 }
 .removebutton {
-  background-color: rgb(17, 16, 16);
+  background-color: rgb(210, 27, 27);
   color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
@@ -61,8 +62,16 @@
   margin: 10px;
   cursor: pointer;
 }
-.addbutton {
+.removebutton:hover {
+  background-color: rgb(93, 6, 6);
+  color: rgb(245, 233, 233);
+}
+.removebutton:active {
   background-color: rgb(17, 16, 16);
+  color: rgb(255, 255, 255);
+}
+.addbutton {
+  background-color: rgb(28, 139, 24);
   color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
@@ -72,13 +81,14 @@
   cursor: pointer;
 }
 .addbutton:hover {
-  background-color: rgb(17, 16, 16);
+  background-color: rgb(93, 6, 6);
   color: rgb(245, 233, 233);
 }
-.removebutton:active {
+.addbutton:active {
   background-color: rgb(17, 16, 16);
   color: rgb(255, 255, 255);
 }
+
 .card {
   height: 50%;
   font-size: 10px;
@@ -96,18 +106,20 @@
   grid-auto-rows: minmax(100px, auto);
 }
 .grid > div {
-  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 1rem;
   font-size: 1.2rem;
   text-align: center;
   height: 420px;
   line-height: 10px;
+  margin-bottom: 50px;
 }
-.diningchair {
-  border: 1px solid #ccc;
+.grid > div:nth-child(1) {
+  background: transparent;
+  text-transform: 0.5;
+  opacity: 15px;
 }
-.diningtable {
-  border: 1px solid #ccc;
-  height: 20px;
+.grid > div:nth-child(2) {
+  background: transparent;
+  text-transform: 0.5;
 }
