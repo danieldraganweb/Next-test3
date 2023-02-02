@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import furniture from "../public/IMG/furniture.jpg";
+//import background from "../public/IMG/furniture.jpg";
 
 import styles from "../styles/Home.module.css";
 
@@ -75,7 +75,6 @@ const Warehouse = () => {
 
   return (
     <div className={styles.container}>
-      <Image src={furniture} alt="background" />
       <h2>Inventory</h2>
       <div className={styles.grid}>
         <ul>

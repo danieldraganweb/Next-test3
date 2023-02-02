@@ -1,5 +1,6 @@
 import Head from "next/head";
-//import Image from "next/image";
+import Image from "next/image";
+import backround from "../public/IMG/furniture.jpg";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Warehouse from "./warehouse";
@@ -17,6 +18,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Warehouse Software</h1>
+        <div className={styles.background}>
+          <Image src={backround} alt="HOMEDESIGN" fill />
+        </div>
         <Warehouse />
       </main>
     </>
