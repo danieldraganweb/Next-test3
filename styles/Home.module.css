@@ -41,26 +41,65 @@
   height: 4px;
   background-color: #4e6c50;
 }
-.button {
-  font-size: large;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: rgb(255, 255, 255);
-  color: rgb(17, 16, 16);
+.inventory {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 30%;
+  margin-top: -50px;
+  font-size: 1rem;
+}
+.removebutton {
+  background-color: rgb(17, 16, 16);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
+}
+.addbutton {
+  background-color: rgb(17, 16, 16);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
 }
 .button:hover {
   background-color: rgb(17, 16, 16);
-  color: rgb(255, 255, 255);
+  color: rgb(245, 233, 233);
 }
 .button:active {
   background-color: rgb(17, 16, 16);
   color: rgb(255, 255, 255);
 }
 .card {
-  width: 80%;
   height: 50%;
-  font-size: 20px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
 }
-.inventory {
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(100px, auto);
+}
+.grid > div {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  height: 420px;
 }
