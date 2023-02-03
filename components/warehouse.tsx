@@ -102,42 +102,38 @@ const Warehouse = () => {
         </ul>
       </div>
       <div className={styles.container}>
-        <div className={styles.grid}>
-          {products.map((product) => (
-            <div key={product.name} className={styles.card}>
-              <h3>
-                {product.name} {"- Available:"}{" "}
-                {product.name === "Dining Chair" ? currentNumberOfSeat : null}
-                {product.name === "Dining Table"
-                  ? currentNumberOfTableTop
-                  : null}
-              </h3>
-              <p>Price: {product.price}</p>
-              <div>
-                {product.contain_articles.map((article) => (
-                  <div key={article.art_id}>
-                    <p>
-                      Art. ID: {article.art_id} - Amount: {article.amount_of}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <button
-                className={styles.addbutton}
-                onClick={() => onAddToCartClick(product)}
-              >
-                Add to cart
-              </button>
-              <button
-                className={styles.removebutton}
-                onClick={() => onRemoveFromCartClick(product)}
-              >
-                Remove from cart
-              </button>
+        {products.map((product) => (
+          <div key={product.name} className={styles.card}>
+            <h3>
+              {product.name} {"- Available:"}{" "}
+              {product.name === "Dining Chair" ? currentNumberOfSeat : null}
+              {product.name === "Dining Table" ? currentNumberOfTableTop : null}
+            </h3>
+            <p>Price: {product.price}</p>
+            <div>
+              {product.contain_articles.map((article) => (
+                <div key={article.art_id}>
+                  <p>
+                    Art. ID: {article.art_id} - Amount: {article.amount_of}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+
+            <button
+              className={styles.addbutton}
+              onClick={() => onAddToCartClick(product)}
+            >
+              Add to cart
+            </button>
+            <button
+              className={styles.removebutton}
+              onClick={() => onRemoveFromCartClick(product)}
+            >
+              Remove from cart
+            </button>
+          </div>
+        ))}
       </div>
     </>
   );
