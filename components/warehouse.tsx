@@ -124,19 +124,19 @@ const Warehouse = () => {
             >
               Remove from cart
             </button>
+            <div className={styles.inventory}>
+              <h2>Inventory</h2>
+              <ul>
+                {inventory.map((article) => (
+                  <li key={article.art_id}>
+                    Art. ID: {article.art_id} - {article.name} - Available
+                    stock: {article.stock}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
-      </div>
-      <div className={styles.inventory}>
-        <h2>Inventory</h2>
-        <ul>
-          {inventory.map((article) => (
-            <li key={article.art_id}>
-              Art. ID: {article.art_id} - {article.name} - Available stock:{" "}
-              {article.stock}
-            </li>
-          ))}
-        </ul>
       </div>
     </>
   );
