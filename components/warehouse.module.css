@@ -47,18 +47,19 @@
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .inventory {
   border: 1px solid white;
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
   align-items: center;
-  line-height: 19px;
-  font-size: 1.2rem;
+  width: 600px;
+  height: 176px;
 }
 .card {
   border: 1px solid white;
