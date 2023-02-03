@@ -6,37 +6,21 @@ const Warehouse = () => {
 
   const [products] = useState(initialProducts);
 
-  // const currentNumberOfLeg = inventory.find(
-  //   (article) => article.art_id === "1"
-  // )?.stock;
-
-  // const initialNumberOfLeg = initialInventory.find(
-  //   (article) => article.art_id === "1"
-  // )?.stock;
-
-  const currentNumberOfScrews = inventory.find(
-    (article) => article.art_id === "2"
+  const currentNumberOfSeat = inventory.find(
+    (article) => article.art_id === "3"
   )?.stock;
 
-  const initialNumberOfScrews = initialInventory.find(
-    (article) => article.art_id === "2"
+  const initialNumberOfSeat = initialInventory.find(
+    (article) => article.art_id === "3"
   )?.stock;
 
-  // const currentNumberOfSeat = inventory.find(
-  //   (article) => article.art_id === "3"
-  // )?.stock;
+  const currentNumberOfTableTop = inventory.find(
+    (article) => article.art_id === "4"
+  )?.stock;
 
-  // const initialNumberOfSeat = initialInventory.find(
-  //   (article) => article.art_id === "3"
-  // )?.stock;
-
-  // const currentNumberOfTableTop = inventory.find(
-  //   (article) => article.art_id === "4"
-  // )?.stock;
-
-  // const initialNumberOfTableTop = initialInventory.find(
-  //   (article) => article.art_id === "4"
-  // )?.stock;
+  const initialNumberOfTableTop = initialInventory.find(
+    (article) => article.art_id === "4"
+  )?.stock;
 
   const checkProductAvailability = (product: { contain_articles: any }) => {
     for (const article of product.contain_articles) {
@@ -88,18 +72,25 @@ const Warehouse = () => {
       }
       return inventoryArticle;
     });
-    if (initialNumberOfScrews === currentNumberOfScrews) {
-      return;
-    }
+    // if (initialNumberOfScrews === currentNumberOfScrews) {
+    //   return;
+    // }
+
     // if (initialNumberOfLeg === currentNumberOfLeg) {
     //   return;
     // }
-    // if (initialNumberOfSeat === currentNumberOfSeat) {
-    //   return;
-    // }
-    // if (initialNumberOfTableTop === currentNumberOfTableTop) {
-    //   return;
-    // }
+    if (
+      product.name === "Dining Chair" &&
+      initialNumberOfSeat === currentNumberOfSeat
+    ) {
+      return;
+    }
+    if (
+      product.name === "Dining Table" &&
+      initialNumberOfTableTop === currentNumberOfTableTop
+    ) {
+      return;
+    }
 
     setInventory(updatedInventory);
   };
@@ -113,13 +104,9 @@ const Warehouse = () => {
             <div key={product.name} className={styles.card}>
               <h3>
                 {product.name} {"- Available:"}{" "}
-                {product.name === "Dining Chair"
-                  ? currentNumberOfScrews &&
-                    Math.floor(currentNumberOfScrews / 8)
-                  : null}
+                {product.name === "Dining Chair" ? currentNumberOfSeat : null}
                 {product.name === "Dining Table"
-                  ? currentNumberOfScrews &&
-                    Math.floor(currentNumberOfScrews / 8)
+                  ? currentNumberOfTableTop
                   : null}
               </h3>
               <p>Price: {product.price}</p>
