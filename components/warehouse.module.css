@@ -21,19 +21,16 @@
   z-index: -1;
   overflow: hidden;
   margin-bottom: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 .title {
   font-size: 90px;
   font-weight: 600;
   position: relative;
-  background: -webkit-linear-gradient(#0c5d5d, #227c70);
+  background: -webkit-linear-gradient(#227c70, #227c70);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
+  -webkit-background-clip: text;
+  margin-top: 5px;
 }
 .title::after {
   content: "";
@@ -56,7 +53,7 @@
   align-items: center;
   line-height: 19px;
   font-size: 1.2rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
 }
 
 .addbutton {
@@ -89,21 +86,23 @@
 }
 
 .card {
-  height: 30%;
+  height: 350px;
   font-size: 10px;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   line-height: 3px;
+  margin-top: 10px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 30rem;
   grid-auto-rows: minmax(100px, auto);
+  margin-top: 20px;
 }
 .grid > div {
   border: 1px solid white;
@@ -114,7 +113,7 @@
   height: 420px;
   line-height: 10px;
   margin-bottom: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
   padding-bottom: 0px;
 }
 .grid > div:nth-child(1) {
@@ -138,7 +137,7 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 720px) {
   .body {
     display: flex;
     flex-direction: row;
