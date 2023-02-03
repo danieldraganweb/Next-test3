@@ -22,19 +22,18 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  height: 62vh;
-  width: 50vw;
-  border: 1px solid white;
+  height: 350px;
+  width: 700px;
+  border: 1px solid rgb(255, 255, 255);
   display: flex; /* flexbox */
   flex-direction: row;
 }
 .title {
-  font-size: 70px;
+  font-size: 170px;
   font-weight: 600;
   position: relative;
-  background: linear-gradient(65deg, #29235b 0%, #301e67 51%, #5b8fb9 85%);
-  background-clip: text;
-
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   margin-top: 5px;
 }
@@ -44,8 +43,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 4px;
-  background-color: #227c70;
+  height: 10px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .inventory {
