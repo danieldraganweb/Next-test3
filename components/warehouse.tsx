@@ -90,7 +90,9 @@ const Warehouse = () => {
 
   return (
     <>
-      <h1 className={styles.title}>Zenith Home Collection Warehouse</h1>
+      <h1 className={styles.title}>
+        Zenith Home Collection Warehouse Logistics
+      </h1>
 
       <h2 className={styles.productstitle}>Products</h2>
       <div className={styles.container}>
@@ -125,7 +127,6 @@ const Warehouse = () => {
               Remove from cart
             </button>
             <div className={styles.inventory}>
-              <h2>Inventory</h2>
               <ul>
                 {inventory.map((article) => (
                   <li key={article.art_id}>

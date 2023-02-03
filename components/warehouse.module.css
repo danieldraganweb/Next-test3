@@ -57,7 +57,7 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin-top: 5px;
+  margin-bottom: 248px;
 }
 .title::after {
   content: "";
@@ -76,15 +76,15 @@
   border: 1px solid white;
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
+
   justify-content: space-around;
   align-content: space-around;
   align-items: center;
-  width: 580px;
-  height: 90px;
+  width: 320px;
+  height: 120px;
 }
 
-.inventory h2 {
+/* .inventory h2 {
   font-size: 1rem;
   font-weight: 600;
   position: relative;
@@ -92,17 +92,26 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-}
-.inventory ul li {
+} */
+.inventory li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
   font-size: 14px;
   font-weight: 600;
   position: relative;
   background: rgb(3, 3, 3);
-  margin-top: 5px;
+  padding: 5px;
   background-clip: text;
   border: 1px solid rgb(255, 255, 255);
   text-decoration: none;
   list-style-type: none;
+  border-radius: 5px;
+}
+.inventory ul {
+  padding: none;
+  margin: none;
 }
 
 .addbutton {
@@ -133,34 +142,6 @@
   background-color: rgb(93, 6, 6);
   color: rgb(245, 233, 233);
 }
-
-/* .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
-  grid-auto-rows: minmax(100px, auto);
-  margin-top: 20px;
-}
-.grid > div {
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 1rem;
-  font-size: 1.2rem;
-  text-align: center;
-  height: 420px;
-  line-height: 10px;
-  margin-bottom: 20px;
-  backdrop-filter: blur(2px);
-  padding-bottom: 0px;
-}
-.grid > div:nth-child(1) {
-  background: transparent;
-  text-transform: 0.5;
-}
-.grid > div:nth-child(2) {
-  background: transparent;
-  text-transform: 0.5;
-} */
 
 @media screen and (min-width: 200px) {
   .body {
