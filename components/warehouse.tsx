@@ -91,18 +91,8 @@ const Warehouse = () => {
   return (
     <>
       <h1 className={styles.title}>Zenith Home Collection Warehouse</h1>
-      <div className={styles.inventory}>
-        <h2>Inventory</h2>
-        <ul>
-          {inventory.map((article) => (
-            <li key={article.art_id}>
-              Art. ID: {article.art_id} - {article.name} - Available stock:{" "}
-              {article.stock}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <h2>Products</h2>
+
+      <h2 className={styles.productstitle}>Products</h2>
       <div className={styles.container}>
         {products.map((product) => (
           <div key={product.name} className={styles.card}>
@@ -136,6 +126,17 @@ const Warehouse = () => {
             </button>
           </div>
         ))}
+      </div>
+      <div className={styles.inventory}>
+        <h2>Inventory</h2>
+        <ul>
+          {inventory.map((article) => (
+            <li key={article.art_id}>
+              Art. ID: {article.art_id} - {article.name} - Available stock:{" "}
+              {article.stock}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

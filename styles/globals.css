@@ -5,13 +5,14 @@ body {
   width: 100vw;
   height: auto;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: display;
 }
 
 body {
   color: #ffffff;
   background-color: rgb(17, 16, 16);
   font-family: "Roboto", sans-serif;
-  height: 3000px; /* Used to enable scrolling */
+  height: auto;
+  width: 100vw;
   background: linear-gradient(55deg, #290b55 0%, #8d5c20 51%, #95856b 85%);
 }
