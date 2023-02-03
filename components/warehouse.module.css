@@ -35,6 +35,7 @@
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   margin-top: 5px;
 }
 .title::after {
@@ -54,12 +55,33 @@
   border: 1px solid white;
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-content: space-around;
   align-items: center;
   width: 600px;
   height: 176px;
+}
+
+.inventory h2 {
+  font-size: 7.5rem;
+  font-weight: 600;
+  position: relative;
+  background: -webkit-linear-gradient(rgb(240, 2, 2), #333);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 5px;
+}
+.inventory li {
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  background: -webkit-linear-gradient(rgb(242, 228, 30), #333);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-top: 5px;
+  background-clip: text;
 }
 .card {
   border: 1px solid white;
