@@ -16,6 +16,18 @@
   overflow: hidden;
   margin-bottom: none;
 } */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 62vh;
+  width: 50vw;
+  border: 1px solid white;
+  display: flex; /* flexbox */
+  flex-direction: row;
+}
 .title {
   font-size: 90px;
   font-weight: 600;
@@ -46,19 +58,12 @@
   align-items: center;
   line-height: 19px;
   font-size: 1.2rem;
-  backdrop-filter: blur(0px);
 }
-/* .card {
-  height: 350px;
-  font-size: 10px;
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  line-height: 3px;
-  margin-top: 10px;
-} */
+.card {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 2rem;
+}
 
 .addbutton {
   background-color: #61876e;
