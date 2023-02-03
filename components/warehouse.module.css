@@ -29,10 +29,10 @@
   flex-direction: row;
 }
 .title {
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 600;
   position: relative;
-  background: linear-gradient(65deg, #03001c 0%, #301e67 51%, #5b8fb9 85%);
+  background: linear-gradient(65deg, #29235b 0%, #301e67 51%, #5b8fb9 85%);
   background-clip: text;
 
   -webkit-background-clip: text;

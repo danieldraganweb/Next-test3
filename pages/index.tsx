@@ -14,7 +14,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>Zenith Home Collection Warehouse</h1>
         {/* <div className={styles.background}>
           <Image src={backround} alt="HOMEDESIGN" fill />
         </div> */}
