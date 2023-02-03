@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import styles from "./warehouse.module.css";
 
 const Warehouse = () => {
@@ -108,6 +107,7 @@ const Warehouse = () => {
   return (
     <>
       <div className={styles.container}>
+        <div className={styles.gradient}></div>
         <div className={styles.grid}>
           {products.map((product) => (
             <div key={product.name} className={styles.card}>
