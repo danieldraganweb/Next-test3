@@ -72,13 +72,7 @@ const Warehouse = () => {
       }
       return inventoryArticle;
     });
-    // if (initialNumberOfScrews === currentNumberOfScrews) {
-    //   return;
-    // }
 
-    // if (initialNumberOfLeg === currentNumberOfLeg) {
-    //   return;
-    // }
     if (
       product.name === "Dining Chair" &&
       initialNumberOfSeat === currentNumberOfSeat
