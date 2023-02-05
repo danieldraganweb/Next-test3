@@ -9,8 +9,7 @@ body {
 }
 
 body {
-  color: #ffffff;
-
+  color: #000000;
   font-family: "Roboto", sans-serif;
   height: auto;
   width: 100vw;
@@ -18,7 +17,8 @@ body {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 @keyframes gradient {
   0% {
