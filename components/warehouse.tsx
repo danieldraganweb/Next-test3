@@ -90,11 +90,18 @@ const Warehouse = () => {
 
   return (
     <>
-      <h1 className={styles.title}>
-        Zenith Home Collection Warehouse Logistics
-      </h1>
+      <div>
+        <div className={styles.bg}></div>
+        <div className={styles.bg2}></div>
+        <div className={styles.bg3}></div>
+      </div>
+      <h1 className={styles.title}>Zenith Home Collection</h1>
 
       <h2 className={styles.productstitle}>Products</h2>
+      <h2 className={styles.subtitle}>
+        Welcome to the warehouse! Here you can see the products we have in stock
+        and add them to your cart.
+      </h2>
       <div className={styles.container}>
         {products.map((product) => (
           <div key={product.name} className={styles.card}>
