@@ -82,7 +82,7 @@
 }
 
 .inventory {
-  border: 1px solid rgb(0, 0, 0);
+  /* border: 1px solid rgb(255, 255, 255); */
   border-radius: 15px;
   display: flex;
   flex-direction: row;
@@ -144,8 +144,8 @@
   width: 70px;
 }
 .addbutton {
-  background-color: #61876e;
-  color: rgb(255, 255, 255);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   padding: 10px;
