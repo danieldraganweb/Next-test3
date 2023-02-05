@@ -1,22 +1,5 @@
-/* .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  padding-bottom: 100px;
-} */
+/* Path: components\warehouse.module.css */
 
-/* .background {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-  margin-bottom: none;
-} */
 .container {
   display: flex;
   flex-direction: row;
@@ -95,40 +78,6 @@
   width: 320px;
   height: 120px;
 }
-
-/* .inventory h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  position: relative;
-  background: black;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-} */
-/* .inventory li {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  font-size: 14px;
-  font-weight: 600;
-  position: relative;
-  background: rgb(3, 3, 3);
-  padding: 5px;
-  background-clip: text;
-  border: 1px solid rgb(255, 255, 255);
-  text-decoration: none;
-  list-style-type: none;
-  border-radius: 5px;
-}
-.inventory ul {
-  padding: none;
-  margin: none;
-}
-.inventory li:hover {
-  background-color: rgb(3, 3, 3);
-  color: rgb(245, 233, 233);
-} */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -137,12 +86,13 @@
   margin-bottom: 20px;
   border: 1px solid;
   display: flex;
-  height: 600px;
-  width: 700px;
+  height: 1300px;
+  width: 800px;
   border-radius: 5px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .grid li {
   display: flex;
@@ -219,32 +169,5 @@
     position: relative;
     height: auto;
     width: 100%;
-  }
-}
-.bg {
-  animation: slide 20s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, rgb(201, 60, 60) 50%, #09f 50%);
-  bottom: 0;
-  left: -50%;
-  opacity: 0.5;
-  position: fixed;
-  right: -50%;
-  top: 0;
-  z-index: -1;
-
-  -webkit-transform: skewX(-25deg);
-  transform: skewX(-25deg);
-}
-
-.bg2 {
-  animation-direction: alternate-reverse;
-  animation-duration: 4s;
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-25%);
-  }
-  100% {
-    transform: translateX(25%);
   }
 }
