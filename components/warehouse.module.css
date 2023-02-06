@@ -182,12 +182,12 @@
   outline: none;
 }
 .addbutton:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  background-color: #0a7e0e;
+  box-shadow: 0 5px #000000;
   transform: translateY(4px);
 }
 .removebutton:active {
-  background-color: rgb(201, 8, 8);
-  box-shadow: 0 5px #666;
+  background-color: rgb(159, 7, 7);
+  box-shadow: 0 5px #000000;
   transform: translateY(4px);
 }
