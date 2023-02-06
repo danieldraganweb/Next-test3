@@ -22,7 +22,19 @@ const Warehouse = () => {
     (article) => article.art_id === "4"
   )?.stock;
 
-  const checkProductAvailability = (product: { contain_articles: any }) => {
+  const initialNumberOfScrews = initialInventory.find(
+    (article) => article.art_id === "2"
+  )?.stock;
+
+  const currentNumberOfScrews = inventory.find(
+    (article) => article.art_id === "2"
+  )?.stock;
+
+  const checkProductAvailability = ({
+    product,
+  }: {
+    product: { contain_articles: any };
+  }) => {
     for (const article of product.contain_articles) {
       const foundArticle = inventory.find(
         (inventoryArticle) => inventoryArticle.art_id === article.art_id
@@ -30,16 +42,23 @@ const Warehouse = () => {
       if (!foundArticle || foundArticle.stock < article.amount_of) {
         return false;
       }
+      //if statement to check if the product is available if the amount of screws is less than 8
     }
     return true;
   };
+
+  // if statement to check if the product is available if the amount of screws is less than 8
+
+  // if statement to check if the product is available if the amount of screws is more than 8
+
+  // if statement to check if the product is available if the amount of screws is equal to 8
 
   const onAddToCartClick = (product: {
     name?: string;
     price?: number;
     contain_articles: any;
   }) => {
-    if (checkProductAvailability(product)) {
+    if (checkProductAvailability({ product })) {
       const updatedInventory = inventory.map((inventoryArticle) => {
         for (const article of product.contain_articles) {
           if (inventoryArticle.art_id === article.art_id) {
