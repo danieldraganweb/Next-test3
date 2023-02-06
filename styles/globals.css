@@ -6,14 +6,15 @@ body {
   height: auto;
   overflow-x: hidden;
   overflow-y: scroll;
+  position: relative;
 }
 
 body {
-  color: #000000;
+  color: #ffffff;
   font-family: "Roboto", sans-serif;
   height: auto;
   width: 100vw;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #151515, #301b3f, #3c415c, #b4a5a5);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -33,7 +34,7 @@ body {
 }
 
 @media all and (max-width: 300px) {
-  .main {
+  .body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,7 +50,7 @@ body {
 }
 
 @media all and (max-width: 720px) {
-  .main {
+  .body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -57,5 +58,11 @@ body {
     position: relative;
     height: auto;
     width: 100%;
+  }
+  .grid {
+    padding-bottom: 10px;
+  }
+  .inventory {
+    padding-bottom: 5px;
   }
 }
