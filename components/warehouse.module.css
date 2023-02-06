@@ -109,7 +109,7 @@
   font-size: 30px;
   font-weight: 500;
   padding: 10px;
-  background: linear-gradient(-45deg, #151515, #301b3f, #3c415c, #b4a5a5);
+  background: linear-gradient(rgb(255, 255, 255), #8e8e8e);
   margin-left: 10px;
   margin-right: 10px;
   backdrop-filter: blur(40px);
@@ -180,4 +180,14 @@
 }
 .removebutton:focus {
   outline: none;
+}
+.addbutton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.removebutton:active {
+  background-color: rgb(201, 8, 8);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
