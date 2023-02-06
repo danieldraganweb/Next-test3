@@ -42,7 +42,6 @@ const Warehouse = () => {
       if (!foundArticle || foundArticle.stock < article.amount_of) {
         return false;
       }
-      //if statement to check if the product is available if the amount of screws is less than 8
     }
     return true;
   };
