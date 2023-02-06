@@ -153,6 +153,7 @@
   margin: 10px;
   cursor: pointer;
   width: 200px;
+  box-shadow: 10px 10px 5px rgb(52, 52, 52);
 }
 .addbutton:hover {
   background-color: #3c6255;
@@ -168,33 +169,15 @@
   font-size: 1rem;
   margin: 10px;
   cursor: pointer;
+  box-shadow: 10px 10px 5px rgb(52, 52, 52);
 }
 .removebutton:hover {
   background-color: rgb(93, 6, 6);
   color: rgb(245, 233, 233);
 }
-
-@media screen and (min-width: 200px) {
-  .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: auto;
-    width: 100vw;
-    font: 10px;
-  }
+.addbutton:focus {
+  outline: none;
 }
-
-@media screen and (min-width: 720px) {
-  .body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: auto;
-    width: 100%;
-  }
+.removebutton:focus {
+  outline: none;
 }

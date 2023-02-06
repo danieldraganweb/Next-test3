@@ -31,3 +31,31 @@ body {
     background-position: 0% 50%;
   }
 }
+
+@media all and (max-width: 300px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: auto;
+    width: 100vw;
+    font: 10px;
+  }
+  .inventory {
+    font-size: 4px;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+}
