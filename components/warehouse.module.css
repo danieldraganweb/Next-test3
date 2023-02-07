@@ -93,6 +93,9 @@
   height: 50px;
   padding: 3px;
 }
+.inventory svg {
+  margin-left: 21px;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
