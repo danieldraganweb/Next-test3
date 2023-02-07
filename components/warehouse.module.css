@@ -57,8 +57,9 @@
   -webkit-background-clip: text;
   background-clip: text;
   margin-bottom: 200px;
-  margin-left: 320px;
-  margin-top: 130px;
+  margin-left: 240px;
+  margin-right: 243px;
+  margin-top: 138px;
 }
 .title::after {
   content: "";
@@ -102,7 +103,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
   padding: 10px;
   background: linear-gradient(rgb(255, 255, 255), #8e8e8e);

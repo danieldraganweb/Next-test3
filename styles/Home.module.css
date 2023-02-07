@@ -7,20 +7,15 @@
   width: 100vw;
   margin-bottom: 100px;
 }
-.background {
-  display: flex;
-  width: 1246px;
-  position: absolute;
-  border-radius: 20px;
-  margin-top: 77px;
-  position: absolute;
-}
+
 .background img {
-  color: transparent;
   display: flex;
-  width: 1246px;
+  width: 1200px;
+  height: 700px;
   position: absolute;
   border-radius: 20px;
   margin-top: 77px;
-  position: absolute;
+  position: relative;
+  margin-left: 1px;
+  margin-right: 10px;
 }
