@@ -46,6 +46,8 @@
   -webkit-background-clip: text;
   background-clip: text;
   margin-bottom: 248px;
+  margin-left: 30px;
+  margin-top: 120px;
 }
 .title::after {
   content: "";
