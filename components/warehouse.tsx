@@ -133,7 +133,7 @@ const Warehouse = () => {
   return (
     <>
       <h1 className={styles.title}>Zenith Home Collection Warehouse</h1>
-      <h2 className={styles.welcome}>Welcome to Zenith Warehouse!</h2>
+      <h2 className={styles.welcomemsg}>Welcome to Zenith Warehouse!</h2>
       <h2 className={styles.productstitle}>Products</h2>
       <div className={styles.container}>
         {products.map((product) => (
