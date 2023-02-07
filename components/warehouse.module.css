@@ -12,6 +12,18 @@
   font-size: 2.2rem;
   margin-top: none;
 }
+.welcomemsg {
+  font-size: 5.2rem;
+  font-weight: 600;
+  position: relative;
+  background: -webkit-linear-gradient(#ffffff, #565656);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 1px;
+  margin-left: 30px;
+  margin-top: 120px;
+}
 .productstitle {
   font-size: 4.5rem;
   font-weight: 600;
@@ -40,13 +52,14 @@
   font-size: 180px;
   font-weight: 600;
   position: relative;
-  background: -webkit-linear-gradient(#eee, #565656);
+  background: -webkit-linear-gradient(#ffffff, #000000);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   margin-bottom: 200px;
   margin-left: 30px;
   margin-top: 120px;
+  backdrop-filter: blur(5px);
 }
 .title::after {
   content: "";
