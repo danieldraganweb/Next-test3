@@ -13,14 +13,14 @@
   margin-top: none;
 }
 .productstitle {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   font-weight: 600;
   position: relative;
   background: -webkit-linear-gradient(rgb(255, 255, 255), #8e8e8e);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin: none;
+  margin-top: none;
   margin-bottom: 1px;
 }
 .productstitle::after {
@@ -44,7 +44,7 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin-bottom: 248px;
+  margin-bottom: 200px;
   margin-left: 30px;
   margin-top: 120px;
 }
@@ -82,9 +82,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border: 1px solid whitesmoke;
   display: flex;
-  height: 600px;
+  height: 500px;
   width: 700px;
   border-radius: 20px;
   display: flex;
@@ -92,7 +91,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 400;
   padding: 10px;
   background: linear-gradient(rgb(255, 255, 255), #8e8e8e);
   margin-left: 10px;
@@ -100,6 +99,7 @@
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 10px 10px 5px rgb(52, 52, 52);
+  line-height: 10px;
 }
 
 .grid li {
