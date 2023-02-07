@@ -1,63 +1,75 @@
 import React, { useState, useEffect } from "react";
 import styles from "./warehouse.module.css";
 
+// Warehouse component
 const Warehouse = () => {
+  // State for the inventory data
   const [inventory, setInventory] = useState(initialInventory);
 
+  // State for the product data
   const [products] = useState(initialProducts);
 
+  // Get the current number of seat in inventory
   const currentNumberOfSeat = inventory.find(
     (article) => article.art_id === "3"
   )?.stock;
 
+  // Get the initial number of seat in inventory
   const initialNumberOfSeat = initialInventory.find(
     (article) => article.art_id === "3"
   )?.stock;
 
+  // Get the current number of table top in inventory
   const currentNumberOfTableTop = inventory.find(
     (article) => article.art_id === "4"
   )?.stock;
 
+  // Get the initial number of table top in inventory
   const initialNumberOfTableTop = initialInventory.find(
     (article) => article.art_id === "4"
   )?.stock;
 
+  // Get the initial number of screws in inventory
   const initialNumberOfScrews = initialInventory.find(
     (article) => article.art_id === "2"
   )?.stock;
 
+  // Get the current number of screws in inventory
   const currentNumberOfScrews = inventory.find(
     (article) => article.art_id === "2"
   )?.stock;
 
+  // Function to check if a product is available based on its required articles
   const checkProductAvailability = ({
     product,
   }: {
     product: { contain_articles: any };
   }) => {
+    // Loop through each article required for the product
     for (const article of product.contain_articles) {
+      // Check if the article exists in the inventory
       const foundArticle = inventory.find(
         (inventoryArticle) => inventoryArticle.art_id === article.art_id
       );
+      // If the article doesn't exist or the stock is less than the amount needed, return false
       if (!foundArticle || foundArticle.stock < article.amount_of) {
         return false;
       }
     }
+    // Return true if all articles exist in the required amount
     return true;
   };
-
-  // if statement to check if the product is available if the amount of screws is less than 8
-
-  // if statement to check if the product is available if the amount of screws is more than 8
-
-  // if statement to check if the product is available if the amount of screws is equal to 8
-
+  // onAddToCartClick is a function that updates the stock count of articles in the inventory
+  // when a product is added to the cart
   const onAddToCartClick = (product: {
     name?: string;
     price?: number;
     contain_articles: any;
   }) => {
+    // Check the availability of the product before updating the stock
     if (checkProductAvailability({ product })) {
+      // Create an updated inventory by decreasing the stock of each article in the product's
+      // contain_articles array
       const updatedInventory = inventory.map((inventoryArticle) => {
         for (const article of product.contain_articles) {
           if (inventoryArticle.art_id === article.art_id) {
@@ -69,15 +81,20 @@ const Warehouse = () => {
         }
         return inventoryArticle;
       });
+      // Update the inventory with the updatedInventory
       setInventory(updatedInventory);
     }
   };
 
+  // onRemoveFromCartClick is a function that updates the stock count of articles in the inventory
+  // when a product is removed from the cart
   const onRemoveFromCartClick = (product: {
     name?: string;
     price?: number;
     contain_articles: any;
   }) => {
+    // Create an updated inventory by increasing the stock of each article in the product's
+    // contain_articles array
     const updatedInventory = inventory.map((inventoryArticle) => {
       for (const article of product.contain_articles) {
         if (inventoryArticle.art_id === article.art_id) {
@@ -90,12 +107,16 @@ const Warehouse = () => {
       return inventoryArticle;
     });
 
+    // Check if the product is a "Dining Chair" and if the initial number of seats
+    // is equal to the current number of seats, then return
     if (
       product.name === "Dining Chair" &&
       initialNumberOfSeat === currentNumberOfSeat
     ) {
       return;
     }
+    // Check if the product is a "Dining Table" and if the initial number of table tops
+    // is equal to the current number of table tops, then return
     if (
       product.name === "Dining Table" &&
       initialNumberOfTableTop === currentNumberOfTableTop
@@ -103,9 +124,12 @@ const Warehouse = () => {
       return;
     }
 
+    // Update the inventory with the updatedInventory
     setInventory(updatedInventory);
   };
 
+  // HTML5 code
+  // The Warehouse component returns a title, a list of products and a button to add or remove a product from the cart
   return (
     <>
       <h1 className={styles.title}>Zenith Home Collection Warehouse</h1>
@@ -246,3 +270,13 @@ const initialProducts = [
     ],
   },
 ] as const;
+
+// if statement to check if the product is available if the amount of screws is less than 8
+
+// if statement to check if the product is available if the amount of screws is more than 8
+
+// if statement to check if the product is available if the amount of screws is equal to 8
+
+//cart.push(product);
+
+// if statement to check if the product is available if the amount of screws is less than 8
