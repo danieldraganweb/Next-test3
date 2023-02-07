@@ -7,3 +7,11 @@
   width: 100vw;
   margin-bottom: 100px;
 }
+.background {
+  display: flex;
+  width: 1246px;
+  position: absolute;
+  border-radius: 20px;
+  margin-top: 77px;
+  position: absolute;
+}
