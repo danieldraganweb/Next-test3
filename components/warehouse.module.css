@@ -75,8 +75,9 @@
   padding: 3px;
 }
 .inventory svg {
-  margin-left: 21px;
+  margin-left: 31px;
   padding-left: 3px;
+  width: 74px;
 }
 .grid {
   display: grid;
