@@ -15,3 +15,12 @@
   margin-top: 77px;
   position: absolute;
 }
+.background img {
+  color: transparent;
+  display: flex;
+  width: 1246px;
+  position: absolute;
+  border-radius: 20px;
+  margin-top: 77px;
+  position: absolute;
+}
