@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import backround from "../public/IMG/background.jpg";
 import styles from "../styles/Home.module.css";
-import Warehouse from "../components/warehouse";
+import Warehouse from "./warehouse";
 
 export default function Home() {
   return (
