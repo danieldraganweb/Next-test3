@@ -133,17 +133,24 @@ const Warehouse = () => {
   return (
     <>
       <h1 className={styles.title}>Zenith Home Collection Warehouse</h1>
+      {/* Title of the page */}
       <h2 className={styles.welcomemsg}>Welcome to Zenith Warehouse!</h2>
+      {/* Welcome message */}
       <h2 className={styles.productstitle}>Products</h2>
+      {/* Title of the products section */}
       <div className={styles.container}>
+        {/* Container for all the products */}
         {products.map((product) => (
           <div key={product.name} className={styles.grid}>
+            {/* Container for a single product */}
             <h3>
               {product.name} {"- Available:"}{" "}
               {product.name === "Dining Chair" ? currentNumberOfSeat : null}
               {product.name === "Dining Table" ? currentNumberOfTableTop : null}
             </h3>
+            {/* Display product name and availability */}
             <p>Price: {product.price} €</p>
+            {/* Display product price */}
             <div>
               {product.contain_articles.map((article) => (
                 <div key={article.art_id}>
@@ -153,6 +160,7 @@ const Warehouse = () => {
                 </div>
               ))}
             </div>
+            {/* Display article information */}
 
             <button
               className={styles.addbutton}
@@ -160,13 +168,17 @@ const Warehouse = () => {
             >
               Add to cart
             </button>
+            {/* Add product to cart button */}
             <button
               className={styles.removebutton}
               onClick={() => onRemoveFromCartClick(product)}
             >
               Remove from cart
             </button>
+            {/* Remove product from cart button */}
             <div className={styles.inventory}>
+              {/* Container for the inventory */}
+
               <svg
                 fill="#000000"
                 height="54px"
@@ -200,13 +212,13 @@ const Warehouse = () => {
                 ))}
               </ul>
             </div>
+            {/* Display article inventory information */}
           </div>
         ))}
       </div>
     </>
   );
 };
-
 export default Warehouse;
 const initialInventory = [
   {
