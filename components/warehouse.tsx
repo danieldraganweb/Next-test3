@@ -281,13 +281,3 @@ const initialProducts = [
     ],
   },
 ] as const;
-
-// if statement to check if the product is available if the amount of screws is less than 8
-
-// if statement to check if the product is available if the amount of screws is more than 8
-
-// if statement to check if the product is available if the amount of screws is equal to 8
-
-//cart.push(product);
-
-// if statement to check if the product is available if the amount of screws is less than 8
