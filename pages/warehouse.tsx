@@ -6,10 +6,10 @@ import { initialProducts } from "../components/initialproducts";
 // Warehouse component
 const Warehouse = () => {
   // State for the inventory data
-  const [inventory, setInventory] = useState(initialInventory.tsx);
+  const [inventory, setInventory] = useState(initialInventory);
 
   // State for the product data
-  const [products] = useState(initialProducts.tsx);
+  const [products] = useState(initialProducts);
 
   // Get the current number of seat in inventory
   const currentNumberOfSeat = inventory.find(
