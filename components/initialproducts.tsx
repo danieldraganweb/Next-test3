@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./warehouse.module.css";
 
 // initialProducts is the initial product data
-const initialProducts = [
+export const initialProducts = [
   {
     id: "1",
     name: "Dinning Chair",

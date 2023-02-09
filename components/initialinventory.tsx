@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./warehouse.module.css";
 
 // initialInventory is the initial inventory data
-const initialInventory = [
+export const initialInventory = [
   {
     art_id: "1",
     name: "leg",
