@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 50px;
+  color: cyan;
+}
+.inventory {
+  border: 1px solid cyan;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: cyan;
+  height: 80px;
+}
+.productslist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.cardContentRight {
+  color: black;
+  border: 1px solid cyan;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
